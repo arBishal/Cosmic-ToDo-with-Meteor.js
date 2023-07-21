@@ -2,3 +2,7 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+.task-form {
+  margin-left: 1.5rem;
+}
