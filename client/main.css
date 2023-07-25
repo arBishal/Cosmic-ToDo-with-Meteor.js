@@ -1,7 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: serif;
   /* background-color: #315481; */
-  /* background-image: linear-gradient(to bottom, #315481, #918e82 100%); */
+  background-image: url("/background2.jpg");
   background-attachment: fixed;
 
   position: absolute;
@@ -13,6 +13,7 @@ body {
   padding: 0;
   margin: 0;
 
+  color: white;
   font-size: 14px;
 }
 
@@ -28,6 +29,7 @@ button {
 
 button:focus {
   outline: 0;
+  opacity: 0.8;
 }
 
 .app {
@@ -49,7 +51,7 @@ button:focus {
   align-items: center;
   flex-grow: 1;
   overflow: auto;
-  background: white;
+  /* background: white; */
   padding: 0px 50px;
 }
 
@@ -62,11 +64,11 @@ button:focus {
 header {
   /* background: #d2edf4; */
   /* background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%); */
-  padding: 30px 0px 10px 0px;
+  padding: 50px 0px 25px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -85,17 +87,22 @@ header {
   display: flex;
   padding: 20px 35px;
   width: 400px;
+  margin-bottom: 20px;
 }
 
 .task-form > input {
   flex-grow: 1;
   box-sizing: border-box;
   padding: 10px 6px;
-  background: transparent;
-  border: 1px solid #aaa;
+  background: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
   width: 100%;
-  font-size: 1em;
+  font-size: 1.25em;
   margin-right: 16px;
+}
+.task-form > input:focus {
+  opacity: 0.8;
 }
 
 .task-form > input:focus {
@@ -109,36 +116,40 @@ header {
 }
 
 .tasks {
+  font-family: sans-serif;
+  font-size: 16px;
   list-style-type: none;
   padding-inline-start: 0;
   padding-left: 16px;
   padding-right: 16px;
   margin-block-start: 0;
   margin-block-end: 0;
-  width: 360px;
+  width: 400px;
 }
 
 .tasks > li {
+  background-color: black;
+  border: rgb(31, 26, 26) 1px solid;
+  border-radius: 5px;
   display: flex;
   padding: 16px;
-  border-bottom: #eee solid 1px;
+  margin-bottom: 10px;
   display: flex;
 }
 
 .tasks > li > input {
   margin-right: 16px;
-  margin-top: -5px;
 }
 
 .tasks > li > span {
   flex-grow: 1;
-  font-size: 16px;
+  font-size: 20px;
   margin-right: 100px;
 }
 
 .tasks > li > button {
   justify-self: flex-end;
-  background-color: #ff3046;
+  background-color: red;
   height: 25px;
   width: 25px;
   margin-top: -5px;
