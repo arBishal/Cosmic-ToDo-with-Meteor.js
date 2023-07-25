@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  /* background-color: #315481; */
+  /* background-image: linear-gradient(to bottom, #315481, #918e82 100%); */
   background-attachment: fixed;
 
   position: absolute;
@@ -21,8 +21,8 @@ button {
   font-size: 1em;
   border: none;
   color: white;
-  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.4);
   padding: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -46,9 +46,11 @@ button:focus {
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 1;
   overflow: auto;
   background: white;
+  padding: 0px 50px;
 }
 
 .main::-webkit-scrollbar {
@@ -58,11 +60,14 @@ button:focus {
 }
 
 header {
-  background: #d2edf4;
-  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
-  padding: 20px 15px 15px 15px;
-  position: relative;
-  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.4);
+  /* background: #d2edf4; */
+  /* background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%); */
+  padding: 30px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .app-bar {
@@ -74,12 +79,12 @@ header {
   font-size: 1.5em;
   margin: 0;
   display: inline-block;
-  margin-right: 1em;
 }
 
 .task-form {
   display: flex;
-  margin: 16px;
+  padding: 20px 35px;
+  width: 400px;
 }
 
 .task-form > input {
@@ -100,7 +105,7 @@ header {
 .task-form > button {
   min-width: 100px;
   height: 95%;
-  background-color: #315481;
+  background-color: #41a868;
 }
 
 .tasks {
@@ -110,19 +115,31 @@ header {
   padding-right: 16px;
   margin-block-start: 0;
   margin-block-end: 0;
+  width: 360px;
 }
 
 .tasks > li {
   display: flex;
   padding: 16px;
   border-bottom: #eee solid 1px;
+  display: flex;
+}
+
+.tasks > li > input {
+  margin-right: 16px;
+  margin-top: -5px;
 }
 
 .tasks > li > span {
   flex-grow: 1;
+  font-size: 16px;
+  margin-right: 100px;
 }
 
 .tasks > li > button {
   justify-self: flex-end;
   background-color: #ff3046;
+  height: 25px;
+  width: 25px;
+  margin-top: -5px;
 }
