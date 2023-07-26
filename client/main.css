@@ -93,16 +93,17 @@ header {
 .task-form > input {
   flex-grow: 1;
   box-sizing: border-box;
-  padding: 10px 6px;
+  padding: 10px 15px;
   background: whitesmoke;
   border: 1px solid whitesmoke;
   border-radius: 5px;
   width: 100%;
   font-size: 1.25em;
   margin-right: 16px;
+  opacity: 0.75;
 }
 .task-form > input:focus {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .task-form > input:focus {
@@ -111,8 +112,11 @@ header {
 
 .task-form > button {
   min-width: 100px;
-  height: 95%;
-  background-color: #41a868;
+  background-color: #16a34a;
+}
+
+.task-form > button:hover {
+  background-color: #22c55e;
 }
 
 .tasks {
@@ -129,8 +133,8 @@ header {
 
 .tasks > li {
   background-color: black;
-  border: rgb(31, 26, 26) 1px solid;
-  border-radius: 5px;
+  border: rgb(64, 64, 64, 0.75) 1px solid;
+  border-radius: 100px;
   display: flex;
   padding: 16px;
   margin-bottom: 10px;
@@ -144,7 +148,7 @@ header {
 .tasks > li > span {
   flex-grow: 1;
   font-size: 20px;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 .tasks > li > button {
@@ -152,5 +156,5 @@ header {
   background-color: red;
   height: 25px;
   width: 25px;
-  margin-top: -5px;
+  border-radius: 100%;
 }
