@@ -129,6 +129,7 @@ header {
   margin-block-start: 0;
   margin-block-end: 0;
   width: 400px;
+  margin-bottom: 50px;
 }
 
 .tasks > li {
@@ -153,8 +154,11 @@ header {
 
 .tasks > li > button {
   justify-self: flex-end;
-  background-color: red;
+  background-color: #dc2626;
   height: 25px;
   width: 25px;
   border-radius: 100%;
+}
+.tasks > li > button:hover {
+  background-color: #ef4444;
 }
