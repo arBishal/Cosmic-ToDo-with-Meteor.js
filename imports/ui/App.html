@@ -10,27 +10,52 @@
                     <h1>Cosmic To-Do with Meteor.js!</h1>
                 </div>
             </div>
-            <p class="count">Incomplete To-Do Count: {{incompleteCount}}</p>
+            {{#if isUserLogged}}
+            <p class="count">Incomplete To-Do Count:
+                {{#if incompleteCount}}
+                {{incompleteCount}}
+                {{else}}
+                <span> Noting to do!</span>
+                {{/if}}
+            </p>
+
+            {{/if}}
         </header>
 
         <div class="main">
+            {{#if isUserLogged}}
+
             {{> form }}
 
+            {{#if incompleteCount}}
             <div class="filter">
                 <button id="hide-completed-button">
                     {{#if hideCompleted}}
-                            Show All
+                    Show All
                     {{else}}
-                            Hide Completed
+                    Hide Completed
                     {{/if}}
                 </button>
             </div>
+            {{/if}}
 
             <ul class="tasks">
                 {{#each tasks}}
-                    {{> task}}
+                {{> task}}
                 {{/each}}
             </ul>
+
+            <div class="logout">
+                You are Logged in as: {{getUser.username}}
+                <button class="user">
+                    Get Out
+                </button>
+            </div>
+
+            {{else}}
+            {{> login}}
+
+            {{/if}}
         </div>
     </div>
 </template>

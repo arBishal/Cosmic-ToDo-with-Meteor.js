@@ -103,11 +103,9 @@ header {
 }
 .task-form > input:focus {
   opacity: 1;
-}
-
-.task-form > input:focus {
   outline: 0;
 }
+
 
 .task-form > button {
   min-width: 100px;
@@ -142,7 +140,7 @@ header {
   display: flex;
 }
 .tasks > li:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   transition: ease-in-out;
   transition-duration: 100ms;
 }
@@ -189,4 +187,82 @@ header {
   font-size: 0.75em;
   margin-bottom: 24px;
   margin-top: 8px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 124px;
+}
+
+.login-form > div {
+  margin: 8px;
+}
+
+.login-form > div > label {
+  font-weight: bold;
+}
+
+.login-form > div  > input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  background: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1em;
+  opacity: 0.75;
+  margin-top: 8px;
+
+}
+.login-form > div > input:focus {
+  opacity: 1;
+  outline: 0;
+}
+
+.login-form > div > button {
+  padding: 12px 24px;
+  margin-top: 16px;
+  border-radius: 124px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.login-form > div > button:hover {
+  color: whitesmoke;
+  background-color: black;
+  border: 1px solid whitesmoke;
+}
+
+.logout {
+  font-family: sans-serif;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 8px;
+  margin-bottom: 48px;
+}
+
+.user {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+  margin-top: 12px;
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 124px;
+}
+
+.user:hover {
+  color: whitesmoke;
+  background-color: black;
+  border: 1px solid whitesmoke;
 }
