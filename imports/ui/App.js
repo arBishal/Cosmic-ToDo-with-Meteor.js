@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { TasksCollection } from '../db/TasksCollection';
+import { Tracker } from 'meteor/tracker';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import './App.html';
 import './Task.js';
@@ -61,11 +62,9 @@ Template.mainContainer.helpers({
       }
     ).fetch();
   },
-  
   hideCompleted() {
     return Template.instance().state.get(HIDE_COMPLETED_STRING);
   },
-  
   incompleteCount() {
     if (!isUserLogged()) {
       return '';
@@ -78,19 +77,16 @@ Template.mainContainer.helpers({
     ).count();
     return incompleteTasksCount ? `(${incompleteTasksCount})` : '';
   },
-  
   isUserLogged() {
     return isUserLogged();
   },
-  
   getUser() {
     return getUser();
   },
-
   isLoading() {
     const instance = Template.instance();
     return instance.state.get(IS_LOADING_STRING);
-  }
+  },
 });
 
 Template.form.events({
@@ -99,7 +95,7 @@ Template.form.events({
     event.preventDefault();
 
     // Get value from form element
-    const target = event.target;
+    const { target } = event;
     const text = target.text.value;
 
     // Insert a task into the collection
