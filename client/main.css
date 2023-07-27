@@ -133,11 +133,12 @@ header {
 .tasks > li {
   background-color: black;
   border: rgb(64, 64, 64, 0.75) 1px solid;
-  border-radius: 128px;
+  border-radius: 28px;
   display: flex;
   padding: 16px;
   margin-bottom: 8px;
   display: flex;
+  align-items: center;
 }
 .tasks > li:hover {
   transform: scale(1.03);
@@ -154,7 +155,7 @@ header {
 .tasks > li > span {
   flex-grow: 1;
   font-size: 20px;
-  margin-right: 48px;
+  margin-right: 24px;
 }
 
 .tasks > li > button {
