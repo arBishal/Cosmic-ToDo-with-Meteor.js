@@ -1,4 +1,4 @@
-# Cosmic-ToDo-with-Meteor.js
+# Cosmic To-Do with Meteor.js
 This is a simple to-do app made with Meteor.js and Blaze. It uses MiniMongo provided by Meteor.js itself to store data.
 ## Look at the preview!
 * Log In as a registered user and the app authenticates you.
