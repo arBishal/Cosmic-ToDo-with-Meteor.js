@@ -39,6 +39,12 @@
             </div>
             {{/if}}
 
+            {{#if isLoaing}}
+                <div class="loading">
+                    Loading... Please wait!
+                </div>
+            {{/if}}
+
             <ul class="tasks">
                 {{#each tasks}}
                 {{> task}}

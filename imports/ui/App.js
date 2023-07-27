@@ -7,6 +7,7 @@ import './Task.js';
 import './Login.js';
 
 const HIDE_COMPLETED_STRING = 'hideCompleted';
+const IS_LOADING_STRING = 'isLoading';
 
 const getUser = () => Meteor.user();
 const isUserLogged = () => !!getUser();
@@ -25,6 +26,11 @@ const getTasksFilter = () => {
 
 Template.mainContainer.onCreated(function mainContainerOnCreated() {
   this.state = new ReactiveDict();
+
+  const handler = Meteor.subscribe('tasks');
+  Tracker.autorun(() => {
+    this.state.set(IS_LOADING_STRING, !handler.ready());
+  });
 });
 
 Template.mainContainer.events({
@@ -55,9 +61,11 @@ Template.mainContainer.helpers({
       }
     ).fetch();
   },
+  
   hideCompleted() {
     return Template.instance().state.get(HIDE_COMPLETED_STRING);
   },
+  
   incompleteCount() {
     if (!isUserLogged()) {
       return '';
@@ -70,12 +78,19 @@ Template.mainContainer.helpers({
     ).count();
     return incompleteTasksCount ? `(${incompleteTasksCount})` : '';
   },
+  
   isUserLogged() {
     return isUserLogged();
   },
+  
   getUser() {
     return getUser();
   },
+
+  isLoading() {
+    const instance = Template.instance();
+    return instance.state.get(IS_LOADING_STRING);
+  }
 });
 
 Template.form.events({
